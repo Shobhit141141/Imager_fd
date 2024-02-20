@@ -27,6 +27,7 @@ function Nav() {
             <input type="text" name="search" value={inputValue} onChange={handleChange} onSubmit={handleSubmit} className='text-black py-1.5 mr-2 rounded-lg'/>
 
             <FaUser className='text-black text-2xl'/>
+            <p className='text-black'> hello </p>
         </div>
     );
 }
