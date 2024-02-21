@@ -1,21 +1,24 @@
 'use client'
 import Image from "next/image";
 import logo from '../../public/photo.png'
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { FaUser } from "react-icons/fa6";
+import Link from "next/link";
+import Search from "./Search";
 function Nav() {
     const [inputValue, setInputValue] = useState('');
-
+    const [search, setSearch] = useState('');
     const handleChange = (e:any) => {
         setInputValue(e.target.value);
     };
 
-    const handleSubmit = (e:any) => {
+    const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log('Input value submitted:', inputValue);
     };
     return (
-        <div className='h-22 w-full flex flex-row justify-between items-center'>
+        
+        <div className='h-22 w-full flex flex-row justify-evenly items-center'>
             <Image
                 src={logo}
                 width={70}
@@ -24,10 +27,10 @@ function Nav() {
                 className=" object-cover"
             />
 
-            <input type="text" name="search" value={inputValue} onChange={handleChange} onSubmit={handleSubmit} className='text-black py-1.5 mr-2 rounded-lg'/>
+            <Search/>
 
             <FaUser className='text-black text-2xl'/>
-            <p className='text-black'> hello </p>
+            
         </div>
     );
 }

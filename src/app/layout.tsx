@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+export const revalidate = 600
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

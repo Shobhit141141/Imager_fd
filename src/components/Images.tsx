@@ -3,9 +3,15 @@ import type { Imageresult } from "@/models/Images";
 import { late } from "zod";
 import ImageContainer from "./ImageContainer";
 import addBlurredDataUrls from "@/library/getBase64";
-async function Images() {
 
-    const url = 'https://api.pexels.com/v1/curated'
+type Props = {
+
+    topic?: string | undefined
+
+}
+async function Images({ topic }: Props) {
+
+    const url = ! topic? 'https://api.pexels.com/v1/curated' : `https://api.pexels.com/v1/search?query=${topic}`
 
     const images: Imageresult | undefined = await fetchImage(url)
 
@@ -13,7 +19,7 @@ async function Images() {
 
     const blurphotos = await addBlurredDataUrls(images)
     return (
-        <section className='px-2 grid gap-2 grid-cols-gallery'>
+        <section className='px-1 grid grid-cols-gallery auto-rows-[10px]'>
 
             {images && blurphotos.map(photo => (
                 <ImageContainer photo={photo} key={photo.id} />
