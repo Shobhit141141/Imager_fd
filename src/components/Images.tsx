@@ -11,7 +11,7 @@ type Props = {
 }
 async function Images({ topic }: Props) {
 
-    const url = ! topic? 'https://api.pexels.com/v1/curated' : `https://api.pexels.com/v1/search?query=${topic}`
+    const url = !topic ? 'https://api.pexels.com/v1/curated' : `https://api.pexels.com/v1/search?query=${topic}`
 
     const images: Imageresult | undefined = await fetchImage(url)
 
@@ -19,7 +19,9 @@ async function Images({ topic }: Props) {
 
     const blurphotos = await addBlurredDataUrls(images)
     return (
-        <section className='px-1 grid grid-cols-gallery auto-rows-[10px]'>
+        <section className='px-1 grid grid-cols-gallery place-content-center auto-rows-[10px] gap-x-4 '
+        
+        >
 
             {images && blurphotos.map(photo => (
                 <ImageContainer photo={photo} key={photo.id} />

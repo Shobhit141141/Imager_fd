@@ -1,7 +1,8 @@
 'use client'
 import Image from "next/image";
 import logo from '../../public/photo.png'
-import { FormEvent, useState } from "react";
+import bg from '../../public/bg.jpg'
+import React, { FormEvent, useState } from "react";
 import { FaUser } from "react-icons/fa6";
 import Link from "next/link";
 import Search from "./Search";
@@ -18,10 +19,10 @@ function Nav() {
     };
     return (
         
-        <div className='h-22 w-full flex flex-row justify-evenly items-center'>
+        <div className='h-22 w-full flex flex-row justify-around items-center my-3' style={{ backgroundImage: 'url("bg")' }}>
             <Image
                 src={logo}
-                width={70}
+                width={50}
                 height={70}
                 alt=""
                 className=" object-cover"
