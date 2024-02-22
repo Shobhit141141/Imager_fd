@@ -11,7 +11,7 @@ type Props = {
 }
 async function Images({ topic }: Props) {
 
-    const url = !topic ? 'https://api.pexels.com/v1/curated?page=4&per_page=80' : `https://api.pexels.com/v1/search?query=${topic}&per_page=80`
+    const url = !topic ? 'https://api.pexels.com/v1/curated?page=4&per_page=80' : `https://api.pexels.com/v1/search?query=${topic}`
 
     const images: Imageresult | undefined = await fetchImage(url)
 
