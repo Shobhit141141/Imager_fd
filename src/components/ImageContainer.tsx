@@ -12,7 +12,7 @@ function ImageContainer({ photo }: Props) {
 
 
     return (
-        <div className='w-[250px] justify-self-center cursor-pointer '
+        <div className='w-[180px] justify-self-center cursor-pointer '
             style={{ gridRowEnd: `span ${photospans}` }}
         >
             <Link href={photo.url} target="_blank" className="grid place-content-center">
@@ -22,7 +22,7 @@ function ImageContainer({ photo }: Props) {
                         alt={photo.alt}
                         width={photo.width}
                         height={photo.height}
-                        sizes="250px"
+                        sizes="180px"
                         placeholder="blur"
                         blurDataURL={photo.blurredDataUrl}
                         priority={false}

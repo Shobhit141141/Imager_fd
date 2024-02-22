@@ -19,7 +19,7 @@ async function Images({ topic }: Props) {
 
     const blurphotos = await addBlurredDataUrls(images)
     return (
-        <section className='px-1 grid grid-cols-gallery place-content-center auto-rows-[10px] gap-x-4 '
+        <section className='px-1 grid grid-cols-gallery place-content-center auto-rows-[7.2px] gap-x-2 w-full'
         
         >
 
