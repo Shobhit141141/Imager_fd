@@ -9,29 +9,31 @@ import Search from "./Search";
 function Nav() {
     const [inputValue, setInputValue] = useState('');
     const [search, setSearch] = useState('');
-    const handleChange = (e:any) => {
+    const handleChange = (e: any) => {
         setInputValue(e.target.value);
     };
 
-    const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log('Input value submitted:', inputValue);
     };
     return (
-        
+
         <div className='h-22 w-full flex flex-row justify-around items-center my-3' style={{ backgroundImage: 'url("bg")' }}>
-            <Image
-                src={logo}
-                width={50}
-                height={70}
-                alt=""
-                className=" object-cover"
-            />
+            <Link href='/'>
+                <Image
+                    src={logo}
+                    width={50}
+                    height={70}
+                    alt=""
+                    className=" object-cover"
+                />
+            </Link>
 
-            <Search/>
+            <Search />
 
-            <FaUser className='text-black text-2xl'/>
-            
+            <FaUser className='text-black text-2xl' />
+
         </div>
     );
 }
