@@ -29,7 +29,7 @@ function Nav() {
                         alt=""
                         className=" object-cover"
                     />
-                    <h2 className=" text-[30px] text-[#df6e41] font-logo font-bold translate-y-[2px] ml-2 sm: hidden">Imager</h2>
+                    <h2 className=" text-[30px] text-[#df6e41] font-logo font-bold translate-y-[2px] ml-2 hidden sm:block">Imager</h2>
                 </div>
 
             </Link>
