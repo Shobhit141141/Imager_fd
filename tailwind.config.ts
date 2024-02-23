@@ -15,7 +15,10 @@ const config: Config = {
       },
       gridTemplateColumns: {
         'gallery': 'repeat(auto-fit , 180px)',
-      }
+      },
+      fontFamily: {
+        'logo': 'Sacramento',
+      },
     },
   },
   plugins: [],

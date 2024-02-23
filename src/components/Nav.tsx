@@ -21,18 +21,22 @@ function Nav() {
 
         <div className='h-22 w-full flex flex-row justify-around items-center my-3' style={{ backgroundImage: 'url("bg")' }}>
             <Link href='/'>
-                <Image
-                    src={logo}
-                    width={50}
-                    height={70}
-                    alt=""
-                    className=" object-cover"
-                />
+                <div className="flex flex-row justify-between items-end ">
+                    <Image
+                        src={logo}
+                        width={50}
+                        height={70}
+                        alt=""
+                        className=" object-cover"
+                    />
+                    <h2 className=" text-[30px] text-[#df6e41] font-logo font-bold translate-y-[2px] ml-2 sm: hidden">Imager</h2>
+                </div>
+
             </Link>
 
             <Search />
 
-            <FaUser className='text-black text-2xl' />
+            {/* <FaUser className='text-black text-2xl' /> */}
 
         </div>
     );
