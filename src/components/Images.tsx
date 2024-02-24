@@ -16,13 +16,13 @@ async function Images({ topic = 'curated', page }: Props) {
 
     let url;
     if (topic === 'curated' && page) { // browsing beyond home 
-        url = `https://api.pexels.com/v1/curated?page=${page}&per_page=70`;
+        url = `https://api.pexels.com/v1/curated?page=${page}&per_page=40`;
     } else if (topic === 'curated') { // home 
-        url = `https://api.pexels.com/v1/curated?page=1&per_page=70`;
+        url = `https://api.pexels.com/v1/curated?page=1&per_page=40`;
     } else if (!page) { // 1st page of search results 
-        url = `https://api.pexels.com/v1/search?query=${topic}&per_page=70`;
+        url = `https://api.pexels.com/v1/search?query=${topic}&per_page=40`;
     } else { // search result beyond 1st page
-        url = `https://api.pexels.com/v1/search?query=${topic}&page=${page}&per_page=70`;
+        url = `https://api.pexels.com/v1/search?query=${topic}&page=${page}&per_page=40`;
     }
 
     const images: Imageresult | undefined = await fetchImage(url);
